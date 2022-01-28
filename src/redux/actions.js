@@ -9,7 +9,7 @@ export const deletetask = (id) => {
 export const addtask = (newtask) => {
     return {
         type: ADD_TASK,
-        playload: newtask,
+        payload: newtask,
     };
 };
 export const donetask = (id) => {

@@ -17,7 +17,7 @@ const reducer = (state = init, { type, payload }) => {
         case ADD_TASK:
             return {
                 ...state,
-                tasks: state.tasks.push(payload),
+                tasks: [...state.tasks, payload],
             };
         case DONE_TASK:
             return {

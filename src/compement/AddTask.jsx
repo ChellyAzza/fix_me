@@ -8,7 +8,7 @@ const AddTask=() => {
 
     const handelSubmit=(e) => {
         e.preventDefault();
-        let newAction={
+        const newAction={
             id: Math.random(),
             action: input,
             isDone: false
@@ -19,13 +19,15 @@ const AddTask=() => {
 
 
     return (
-        <div className="input">
-            <form onSubmit={handelSubmit}>
 
-                <input type="text" value={input} onChange={(e) => setInput(e.target.value)} />
-                {/* <button type='submit'>ADD</button> */}
-            </form>
+        <div className="input">
+
+
+            <input type="text" value={input} onChange={(e) => setInput(e.target.value)} />
+            <button onClick={handelSubmit}>ADD</button>
+
         </div>
+
     )
 }
 
